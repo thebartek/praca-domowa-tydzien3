@@ -15,9 +15,10 @@ API które będzie obsługiwało metody webowe:
 </ul>
 Przy starcie aplikacji mają dodawać się 3 pozycje.<br>
 <br>
-—————————
+—————————<br>
 <br>
 Dla ambitnych:<br>
+<br>
 <ul>
   <li>rozbuduj aplikacje o możliwość zwracania danych w postaci XML</li>
   <li>dodaj obsługę Swgger UI</li>
