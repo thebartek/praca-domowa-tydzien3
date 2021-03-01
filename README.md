@@ -13,12 +13,14 @@ API które będzie obsługiwało metody webowe:
   <li>do modyfikowania jednego z pól pozycji</li>
   <li>do usuwania jeden pozycji</li>
 </ul>
-Przy starcie aplikacji mają dodawać się 3 pozycje.
+Przy starcie aplikacji mają dodawać się 3 pozycje.<br>
 
 —————————
 
-Dla ambitnych:
+Dla ambitnych:<br>
 
-rozbuduj aplikacje o możliwość zwracania danych w postaci XML<br>
-dodaj obsługę Swgger UI<br>
-zaimplementuj HATEOAS
+<ul>
+  <li>rozbuduj aplikacje o możliwość zwracania danych w postaci XML</li>
+  <li>dodaj obsługę Swgger UI</li>
+  <li>zaimplementuj HATEOAS</li>
+</ul>
