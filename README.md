@@ -4,13 +4,15 @@ Kurs Spring Boot 2 - Tydzień 3
 Napisz REST API dla listy pojazdów. Pojazd będzie miał pola: id, mark, model, color.
 API które będzie obsługiwało metody webowe:
 
-do pobierania wszystkich pozycji
-do pobierania elementu po jego id
-do pobierania elementów w określonym kolorze (query)
-do dodawania pozycji
-do modyfikowania pozycji
-do modyfikowania jednego z pól pozycji
-do usuwania jeden pozycji
+<ul>
+  <li>do pobierania wszystkich pozycji</li>
+  <li>do pobierania elementu po jego id</li>
+  <li>do pobierania elementów w określonym kolorze (query)</li>
+  <li>do dodawania pozycji</li>
+  <li>do modyfikowania pozycji</li>
+  <li>do modyfikowania jednego z pól pozycji</li>
+  <li>do usuwania jeden pozycji</li>
+</ul>
 Przy starcie aplikacji mają dodawać się 3 pozycje.
 
 —————————
