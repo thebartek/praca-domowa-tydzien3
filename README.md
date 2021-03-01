@@ -14,7 +14,7 @@ API które będzie obsługiwało metody webowe:
   <li>do usuwania jeden pozycji</li>
 </ul>
 Przy starcie aplikacji mają dodawać się 3 pozycje.<br>
-
+<br>
 —————————
 
 Dla ambitnych:<br>
