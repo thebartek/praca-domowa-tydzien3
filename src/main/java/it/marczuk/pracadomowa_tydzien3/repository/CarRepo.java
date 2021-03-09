@@ -14,7 +14,7 @@ public class CarRepo {
 
     public CarRepo() {
         this.carList = new ArrayList<>();
-        createListOfSneakers();
+        createListOfCars();
     }
 
     public void addCar(Car car) {
@@ -29,12 +29,13 @@ public class CarRepo {
         carList.remove(car);
     }
 
-    public void modSneaker(Car car, Car newCar) {
-        carList.add(car.getId().intValue(), newCar);
-        carList.remove(car);
+    public void modCar(Car newCar) {
+        Long id = newCar.getId()-1;
+        carList.remove(id.intValue());
+        carList.add(id.intValue(), newCar);
     }
 
-    public void createListOfSneakers() {
+    public void createListOfCars() {
         carList.add(new Car(1L, "BMW", "i8", Color.BLACK));
         carList.add(new Car(2L, "Mercedes", "Brabus", Color.WHITE));
         carList.add(new Car(3L, "Fiat", "126p", Color.RED));

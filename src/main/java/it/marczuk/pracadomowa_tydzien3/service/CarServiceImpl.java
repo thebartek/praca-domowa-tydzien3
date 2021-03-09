@@ -27,29 +27,27 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public Optional<Car> getCarById(Long id) {
-        List<Car> carList = getAllCars();
+        List<Car> carList = repository.getCarList();
         return carList.stream().filter(car -> car.getId() == id).findFirst();
     }
 
     @Override
     public List<Car> getCarsByColor(String color) {
-        List<Car> carList = getAllCars();
+        List<Car> carList = repository.getCarList();
         return carList.stream().filter(car -> car.getColor().toString().equals(color)).collect(Collectors.toList());
     }
 
     @Override
     public Optional<Car> addCar(Car car) {
-        List<Car> carList = getAllCars();
+        List<Car> carList = repository.getCarList();
         boolean isCarExists = carList.stream().anyMatch(newCar -> newCar.getMark().equals(car.getMark()));
         return isCarExists ? Optional.empty() : Optional.of(saveCar(car));
     }
 
     @Override
-    public Optional<Car> modCar(Car newCar) {
-        List<Car> carList = getAllCars();
-        Optional<Car> first = carList.stream().filter(car -> car.getId() == newCar.getId()).findFirst();
-        repository.modSneaker(first.get(), newCar);
-        return first;
+    public Car modCar(Car newCar) {
+        repository.modCar(newCar);
+        return newCar;
     }
 
     @Override
@@ -62,14 +60,14 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public Optional<Car> removeCar(Long id) {
-        List<Car> carList = getAllCars();
+        List<Car> carList = repository.getCarList();
         Optional<Car> first = carList.stream().filter(car -> car.getId() == id).findFirst();
         repository.removeCar(first.get());
         return first;
     }
 
     private Optional<Car> updateCarMethod(long id, String type, String modArg){
-        List<Car> carList = getAllCars();
+        List<Car> carList = repository.getCarList();
         Optional<Car> first = carList.stream().filter(car -> car.getId() == id).findFirst();
         if(first.isPresent()) {
             if(type.equals("mark")){
@@ -87,8 +85,7 @@ public class CarServiceImpl implements CarService {
     }
 
     private Car saveCar(Car car) {
-        List<Car> carList = getAllCars();
-        carList.add(car);
+        repository.addCar(car);
         return car;
     }
 }

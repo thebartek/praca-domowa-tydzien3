@@ -15,7 +15,7 @@ public interface CarService {
 
     Optional<Car> addCar(Car car);
 
-    Optional<Car> modCar(Car car);
+    Car modCar(Car car);
 
     Optional<Car> modCarParameter(Long id, String modify);
 

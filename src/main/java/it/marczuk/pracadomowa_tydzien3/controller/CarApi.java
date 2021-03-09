@@ -58,7 +58,7 @@ public class CarApi {
 
     @PutMapping
     public ResponseEntity<Car> modCar(@RequestBody Car car) {
-        Optional<Car> carUpdatedOptional = carService.modCar(car);
+        Optional<Car> carUpdatedOptional = Optional.of(carService.modCar(car));
         return carUpdatedOptional.map(editCar -> {
             addLinkToCar(editCar);
             return ResponseEntity.ok(editCar);
